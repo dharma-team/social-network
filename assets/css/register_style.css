@@ -1,0 +1,163 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+form {
+	text-align: center;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	background: rgb(158,233,162);
+	background: radial-gradient(circle, rgba(158,233,162,1) 0%, rgba(28,78,136,1) 100%);
+}
+
+/******** Form Register and Login ********/
+.login_box {
+	position: relative;
+	top: 10%;
+	margin: 0 auto;
+	max-width: 350px;
+	width: 100%;
+	border: 1px solid #7a858a;
+	border-radius: 5px;
+	padding: 5px;
+	opacity: 0.90;
+}
+
+.login_header {
+	width: 100%;
+	height: 50px;
+	/*background-color: #1c885a;*/
+	background: white;
+	color: #191b1c;
+	padding: 5px 0;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+
+.login_header h1 {
+	font-size: 26px;
+	font-family: "Times New Roman", Times, serif;
+	color: #1c885a;
+	padding: 2px 0;
+}
+
+.two_letters {
+	color: #e42d65;
+}
+
+.three_letters {
+	color: #1c885a;
+}
+
+input[type="submit"] {
+	background-color: #3f6486;
+	border: 1px solid #b1c5d7;
+	border-radius: 3px;
+	width: 80%;
+	margin: 5px 0 5px 0;
+	padding: 7px 10px;
+	color: #fff;
+	text-shadow: #73B6E2 0.5px 0.5px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	border: 1px solid #e5e5e5;
+	margin-top: 5px;
+	width: 80%;
+	height: 35px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+	border-color: #2b72b1;
+}
+
+.form_login, .form_reg {
+	background: white;
+    width: 100%;
+    margin: 0 auto;
+    /*border: 1px solid #e6e6e6;*/
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 4px 0;
+}
+
+.box_sigup, .box_sigin {
+	display: flex;
+	background: white;
+    width: 100%;
+    margin: 0 auto;
+    /*border: 1px solid #e6e6e6;*/
+    border-radius: 4px;
+    padding: 20px 0;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #191b1c;
+}
+
+.box_sigup a, .box_sigin a  {
+	margin-left: 5px;
+	text-decoration: none;
+	color: #1e7ba8;
+}
+
+.box_sigup a:hover, .box_sigin a:hover {
+	color: #099ce3;
+}
+
+#second {
+	display: none;
+}
+/******** END Form Register and Login ********/
