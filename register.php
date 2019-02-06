@@ -55,7 +55,7 @@ include_once 'includes/form_handlers/login_handler.php';
 					<br>
 					<input type="submit" name="login_button" value="Login">
 					<br>
-					<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>"; ?>
+					<?php if(in_array("Неверный адрес электронной почты или пароль<br>", $error_array)) echo "Неверный адрес электронной почты или пароль<br>"; ?>
 				</form>
 				<div class="box_sigup">
 					<p>Ещe нет аккаунта?</p>
@@ -71,7 +71,7 @@ include_once 'includes/form_handlers/login_handler.php';
 					}	
 					?>" required>
 					<br>
-					<?php if(in_array("Your first name must be between 2 and 25 characters<br>", $error_array)) echo "Your first name must be between 2 and 25 characters<br>"; ?>
+					<?php if(in_array("Ваше имя должно быть от 2 до 25 символов<br>", $error_array)) echo "Ваше имя должно быть от 2 до 25 символов<br>"; ?>
 
 					<input type="text" name="reg_lname" placeholder="Last Name" value="<?php
 					if(isset($_SESSION['reg_lname'])) {
@@ -79,7 +79,7 @@ include_once 'includes/form_handlers/login_handler.php';
 					}	
 					?>" required>
 					<br>
-					<?php if(in_array("Your last name must be between 2 and 25 characters<br>", $error_array)) echo "Your last name must be between 2 and 25 characters<br>"; ?>
+					<?php if(in_array("Ваша фамилия должна быть от 2 до 25 символов<br>", $error_array)) echo "Ваша фамилия должна быть от 2 до 25 символов<br>"; ?>
 
 					<input type="email" name="reg_email" placeholder="Email" value="<?php
 					if(isset($_SESSION['reg_email'])) {
@@ -87,30 +87,21 @@ include_once 'includes/form_handlers/login_handler.php';
 					}	
 					?>" required>
 					<br>
-					<input type="email" name="reg_email2" placeholder="Confim Email" value="<?php
-					if(isset($_SESSION['reg_email2'])) {
-						echo $_SESSION['reg_email2'];
-					}	
-					?>" required>
-					<br>
-					<?php if(in_array("Email already in use<br>", $error_array)) echo "Email already in use<br>";
-					else if(in_array("Invalid email format<br>", $error_array)) echo "Invalid email format<br>"; 
-					else if(in_array("Emails don't match<br>", $error_array)) echo "Emails don't match<br>"; ?>
+					<?php if(in_array("Адрес электронной почты уже занят<br>", $error_array)) echo "Адрес электронной почты уже занят<br>";
+					else if(in_array("Неверный формат электронной почты<br>", $error_array)) echo "Неверный формат электронной почты<br>"; ?>
 
 					<input type="password" name="reg_password" placeholder="Password" required>
 					<br>
 					<input type="password" name="reg_password2" placeholder="Confim Password" required>
 					<br>
-					<?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>";
-					else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>"; 
-					else if(in_array("Your password must be between 5 and 30 characters<br>", $error_array)) echo "Your password must be between 5 and 30 characters<br>"; ?>
+					<?php if(in_array("Ваши пароли не совпадают<br>", $error_array)) echo "Ваши пароли не совпадают<br>";
+					else if(in_array("Ваш пароль может содержать только английские символы или цифры<br>", $error_array)) echo "Ваш пароль может содержать только английские символы или цифры<br>"; 
+					else if(in_array("Ваш пароль должен быть от 5 до 30 символов<br>", $error_array)) echo "Ваш пароль должен быть от 5 до 30 символов<br>"; ?>
 
 					<input type="submit" name="register_button" value="Register">
 					<br>
 
-					<?php if(in_array("<span style='color: #00b300;'>Your account has been successfully created.<br>
-						Thank you for registering!</span>", $error_array)) echo "<span style='color: #00b300;'>Your account has been successfully created.<br>
-						Thank you for registering!</span>";?>
+					<?php if(in_array("<span style='color: #00b300;'>Ваша учетная запись была успешно создана.<br>Спасибо за регистрацию!</span>", $error_array)) echo "<span style='color: #00b300;'>Ваша учетная запись была успешно создана.<br>Спасибо за регистрацию!</span>";?>
 				</form>
 				<div class="box_sigin">
 						<p>Уже есть аккаунт?</p>
