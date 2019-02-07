@@ -1,5 +1,6 @@
 <?php
 
+
 if(isset($_POST['login_button'])) {  
 
     $email = mysqli_real_escape_string($con, $_POST['log_email']);  
@@ -12,7 +13,7 @@ if(isset($_POST['login_button'])) {
     
     	while($row = mysqli_fetch_array($result)) {  
             
-            if(password_verify($password, $row['password'])){ 
+            if(password_verify($password, $row["password"])){ 
 				
 				$username = $row['username'];
                 //return true;  
