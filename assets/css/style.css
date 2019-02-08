@@ -91,8 +91,10 @@ nav li:hover {
 	border-bottom: 1px solid #07A51A;
 }
 
-nav a {
+nav a{
+	color: #484c4f;
 	text-decoration: none;
+	padding: 0 5px;
 }
 
 /******** End Header ********/
@@ -177,6 +179,40 @@ textarea:focus {
 
 .post_form input[type="submit"]:active {
 	padding: 5px 4px 4px 5px;
+}
+
+.post_box {
+	overflow-y: scroll;
+	width: 91%;
+	height: auto;
+	max-height: 500px;
+	background-color: #eee;
+	margin: 0 auto;
+	position: relative;
+    bottom: -315px;
+}
+
+.status_post {
+	font-size: 15px;
+	padding: 10px 5px;
+	min-height: 75px;
+	border-bottom: 1px solid #dadada
+}
+
+.post_profile_pic {
+	float: left;
+	margin-right: 7px;
+}
+
+.post_profile_pic img {
+	border-radius: 50%;
+}
+
+#post_body {
+	width: 90%;
+	height: auto;
+	word-wrap: break-word;
+	overflow: hidden;
 }
 
 .side_right {

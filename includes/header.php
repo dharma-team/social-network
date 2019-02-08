@@ -17,6 +17,7 @@ else {
 <html>
 <head>
 	<title>Welcome to YoHey</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -34,9 +35,10 @@ else {
 
 			<nav>
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Messages</a></li>
-					<li><a href="#">Setting</a></li>
+					<li><a href="#"><i class="fas fa-home"></i></a></li>
+					<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+					<li><a href="#"><i class="fas fa-cog"></a></i></li>
+					<li><a href="/social-network/includes/handlers/logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
 				</ul>
 			</nav>
 		</div>

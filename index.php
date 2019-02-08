@@ -3,14 +3,22 @@ ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 include_once 'includes/header.php';
+include_once 'includes/classes/User.php';
+include_once 'includes/classes/Post.php';
 //session_destroy();
+
+if(isset($_POST['post'])){
+	$post = new Post($con, $userLoggedIn);
+	$post->submitPost($_POST['post_text'], 'none');
+	//var_dump($post->submitPost($_POST['post_text']));
+}
 
 ?>
 	
 	<div class="side_left">
 		<nav>
 			<a href="#">New</a>
-			<a href="#">Profile</a>
+			<a href="<?php echo $userLoggedIn; ?>">Profile</a>
 			<a href="#">Friends</a>
 			<a href="#">Chat</a>
 			<a href="#">Music</a>
@@ -24,14 +32,21 @@ include_once 'includes/header.php';
 				<input type="submit" name="post" id="post_button" value="Post">
 			</form>	
 		</div>	
+
+	<div class="post_box">
+	<?php 
+		$post = new Post($con, $userLoggedIn);
+		$post->loadPostsFriends();
+	?>
+	</div>
 	</div>
 
 	<div class="side_right">
 		<div class="user_details">
-			<a href="#"> <img src="<?php echo $user['profile_pic']; ?>"> </a>
+			<a href="<?php echo $userLoggedIn; ?>"> <img src="<?php echo $user['profile_pic']; ?>"> </a>
 			
 			<div class="user_details_left_right">
-				<a href="#">
+				<a href="<?php echo $userLoggedIn; ?>">
 					<?php echo $user['first_name'] . " " . $user['last_name'];?>
 				</a>
 				<br>
@@ -41,7 +56,6 @@ include_once 'includes/header.php';
 			</div>	
 		</div>
 	</div>	
-
 
 </div>
 </body>
